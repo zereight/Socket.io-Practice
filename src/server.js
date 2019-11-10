@@ -14,6 +14,9 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log("✅ Listening!!");
 });
+
+// ws:/ /localhost and http://localhost run on the same server but they are different ways of handling connections.
+const io = SocketIO(server); // websocket이랑, http는 다른 프로토콜인데 같은 port에서 동작하도록 해줌(즉, 같은 서버)
