@@ -1,0 +1,29 @@
+{
+  "name": "socket.io-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:server": "nodemon --exec babel-node src/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zereight/Socket.io-Practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zereight/Socket.io-Practice/issues"
+  },
+  "homepage": "https://github.com/zereight/Socket.io-Practice#readme",
+  "dependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/node": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
