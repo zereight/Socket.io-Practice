@@ -27,8 +27,10 @@ io.on("connect", socket => {
   // localhost:4000에서 pug에 스크립트 추가하고 console열고 io("/") 하면 프로트엔드랑 연결됨
   console.log("Somebody connected!");
   sockets.push(socket.id);
+  //   socket.emit("hello"); // socket이 emit하면 다른 socket은 on으로 listen한다.
+  socket.broadcast.emit("hello"); // 현재 통신하고 있는 socket이외의 모든 socket이 알게한다.
 });
 
 setInterval(() => {
-    console.log(sockets);
+  console.log(sockets);
 }, 1000);
